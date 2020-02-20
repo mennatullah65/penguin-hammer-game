@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>penguin hit hammer arcade redemption game</title>
+    <link rel="stylesheet" href="animate.min.css">
+
+    <link rel="stylesheet" type="text/css" href="index.css?v=<?php echo time(); ?>"/>
+    <link href='https://fonts.googleapis.com/css?family=Teko' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<script>
+/*
+$(function() {
+    // setTimeout() function will be fired after page is loaded
+    // it will wait for 5 sec. and then will fire
+    // $("#successMessage").hide() function
+    setTimeout(function() {
+        $("#p1").hide('blind', {}, 500)
+    }, 5000);
+});
+*/
+/*
+$(document).ready(function(){
+    $('a#p1').click(function() {
+      $('#p1').hide();
+    });
+});
+*/
+/*
+window.onload=function(){
+    var hidediv=document.getElementById('p1');
+    document.onclick=function(div){
+        if(div.target.id=='p1'){
+            hidediv.style.display=none;
+        }
+    }
+}
+*/
+/*
+document.getElementById('p1').addEventListener("click",function(){
+    var doc=document.getElementById('p1');
+    if(doc.style.display=="block"){
+        doc.style.display="none";
+    }
+})
+*/
+if(! count) {
+  var count = 0;
+  }
+  if(! highscore) {
+    var highscore=0;
+  }
+
+  // function to increment value of count variable
+  function incrementCount() {
+    count++;
+    document.getElementById("score").innerHTML = count;
+    if(count>highscore){
+        highscore=count;
+        document.getElementById("highscore").innerHTML = count;
+    }
+  }
+
+  function reset() {
+    count=0;
+    document.getElementById("score").innerHTML = count;
+  }
+
+var i=1000;
+function incrementSeconds() {
+    i += 1000;
+    setTimeout(function() {
+    $('#p1').fadeOut('fast');
+}, i); 
+setTimeout(function() {
+    $('#p1').fadeIn('fast');
+}, i+2000); 
+
+setTimeout(function() {
+    $('#p6').fadeOut('fast');
+}, i+1000); 
+setTimeout(function() {
+    $('#p6').fadeIn('fast');
+}, i+6000); 
+
+setTimeout(function() {
+    $('#p2').fadeOut('fast');
+}, i+4000); 
+setTimeout(function() {
+    $('#p2').fadeIn('fast');
+}, i+8000); 
+
+setTimeout(function() {
+    $('#p3').fadeOut('fast');
+}, i+1000); 
+setTimeout(function() {
+    $('#p3').fadeIn('fast');
+}, i+3000); 
+
+setTimeout(function() {
+    $('#p4').fadeOut('fast');
+}, i+2000); 
+setTimeout(function() {
+    $('#p4').fadeIn('fast');
+}, i+5000); 
+
+setTimeout(function() {
+    $('#p5').fadeOut('fast');
+}, i); 
+setTimeout(function() {
+    $('#p5').fadeIn('fast');
+}, i+5000); 
+
+setTimeout(function() {
+    $('#p7').fadeOut('fast');
+}, i+3000); 
+setTimeout(function() {
+    $('#p7').fadeIn('fast');
+}, i+5000); 
+}
+
+var cancel = setInterval(incrementSeconds, 3000);
+
+
+
+
+</script>
+<div class="cont1">
+ <img src="OSC Logo-Old.png" class="logoImg"/>
+<p class="logo"> HIT THE PENGUIN</p>
+</div>
+<div class="container" id="container">
+
+<button onClick="reset();" class="btn">Restart</button>
+
+<div class="hole"></div>
+
+
+<div class="penguin p1" id="p1"onclick="incrementCount()">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+
+
+<div class="hole"></div>
+
+
+<div class="penguin p2"  id="p2" style="margin-left:330px;"onclick="incrementCount()">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+
+<div class="hole"></div>
+
+
+<div class="penguin p3"  id="p3" style="margin-left:590px;"onclick="incrementCount()">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+
+
+<div class="hole"></div>
+
+<div class="penguin p4"   id="p4" style="margin-left:850px;"onclick="incrementCount()">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+
+<div class="line"></div>
+<div class="score">score<p id="score">0</p></div>
+
+<div class="highscore">high score <p id="highscore">0</p></div>
+
+<div class="H2nd">
+<div class="hole"></div>
+
+<div class="penguin p5"  id="p5" style="margin-left:70px;margin-top:-30px;"onclick="incrementCount()">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+
+
+<div class="hole"></div>
+
+<div class="penguin p6"   id="p6" style="margin-left:330px;margin-top:-30px;"onclick="incrementCount()">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+
+<div class="hole"></div>
+
+<div class="penguin p7"  id="p7" style="margin-left:590px;margin-top:-30px;"onclick="incrementCount()">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+
+</div>
+</div>
+    
+</body>
+</html>
